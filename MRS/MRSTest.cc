@@ -13,18 +13,20 @@ int main() {
 	MRSCodec timeCodec(4,timeRadices);
 	MRSCodec chessCodec(2,chessRadices,chessMinima);
 	
-	//cout << "Enter days, hours, minutes, seconds: ";
-	//cin >> values[0] >> values[1] >> values[2] >> values[3];
-	//
-	//encoded = timeCodec.encode(values);
-	//cout << "Encoded time: " << encoded << endl;
-	//
-	//cout << "Enter encoded time: ";
-	//cin >> encoded;
-	//
-	//pDecoded = timeCodec.decode(encoded);
-	//cout << "Day: " << pDecoded[0] << "   Hour: " << pDecoded[1] << "   Minute: " << pDecoded[2] << "   Second: " << pDecoded[3] << endl;
+	// Testing Time Codec
+	cout << "Enter days, hours, minutes, seconds: ";
+	cin >> values[0] >> values[1] >> values[2] >> values[3];
+	
+	encoded = timeCodec.encode(values);
+	cout << "Encoded time: " << encoded << endl;
+	
+	cout << "Enter encoded time: ";
+	cin >> encoded;
+	
+	pDecoded = timeCodec.decode(encoded);
+	cout << "Day: " << pDecoded[0] << "   Hour: " << pDecoded[1] << "   Minute: " << pDecoded[2] << "   Second: " << pDecoded[3] << endl;
 
+	// Testing Chess Codec
 	cout << "Enter chess pos: ";
 	cin >> str;
 	

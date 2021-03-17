@@ -1,5 +1,6 @@
 #include "sampler.h"
 #include <random>
+#include <ctime>
 
 Sampler::Sampler(int n) {
     array = new int[n];
@@ -13,7 +14,8 @@ Sampler::~Sampler() {
 }
 
 int Sampler::getSample() {
-    int i = rand();
+    srand(time(NULL));
+    int i = rand() % size;
     int e = array[i];
     size--;
     array[i] = array[size];
