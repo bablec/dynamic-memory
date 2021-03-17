@@ -7,7 +7,7 @@ public:
 	~Sampler();
 	int getSample();
 private:
-	
+	int size, *array;
 };
 
 #endif
